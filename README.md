@@ -24,6 +24,19 @@ Experiment with improvements such as transfer learning (e.g., VGG16, ResNet, Eff
 https://www.kaggle.com/datasets/marcopinamonti/alzheimer-mri-4-classes-dataset
 https://www.kaggle.com/datasets/preetpalsingh25/alzheimers-dataset-4-class-of-images
 
-
 ### Get started
 The code has been developing to be run directly from Google Colaboratory, thus it's sufficient to open the file in Colab and run the single cells either one by one or all in one.
+
+##
+### Project Milestones
+The project's current version contains the Project Milestone 1: Data acquisition and preparation. 
+
+## Milestone 1: Data acquisition and preparation
+In this phase of the project, we downloaded the dataset and prepare the data for training using strategies to increase the effectiveness of the training. Our data set has is very unbalanced, with the Mild Demented class having a significantly smaller amount of data, as can be seen in the class distribution below:
+
+28 subjects for the Mild Dementia Class
+2 subjects for the Moderate Dementia Class
+100 subjects for the Non Dementia Class
+70 subjects for the Very Mild Dementia Class
+
+Due to this, we used the Stratified K-Fold technique plus a weighted data loader to try to make the most of the data available to us.
