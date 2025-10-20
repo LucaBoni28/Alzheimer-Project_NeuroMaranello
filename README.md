@@ -39,4 +39,4 @@ In this phase of the project, we downloaded the dataset and prepared the data fo
 - 100 subjects for the **Non Dementia** class
 - 70 subjects for the **Very Mild Dementia** class
 
-Due to this, we used the Stratified K-Fold technique plus a weighted data loader to try to make the most of the data available to us.
+Due to this, we used the Stratified K-Fold technique plus a weighted sampler for the data loader to try to make the most of the data available to us.
