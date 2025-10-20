@@ -1,7 +1,7 @@
 # Alzheimer’s Disease Detection with Deep Learning
 
 ## Group name: NeuroMaranello
-Members of group:
+Group members:
 - Luca Boninsegna YPOUBM
 - Samuele Rosato YKQGE5
 - Belarmino Gorlach-Lira N9Z4S5
@@ -34,9 +34,9 @@ The project's current version contains the Project Milestone 1: Data acquisition
 ## Milestone 1: Data acquisition and preparation
 In this phase of the project, we downloaded the dataset and prepared the data for training using strategies to increase the effectiveness of the training. Our data set is very unbalanced, with the Moderate Dementia Class having a significantly smaller amount of data, as can be seen in the class distribution below:
 
-28 subjects for the Mild Dementia Class
-2 subjects for the Moderate Dementia Class
-100 subjects for the Non Dementia Class
-70 subjects for the Very Mild Dementia Class
+- 28 subjects for the **Mild Dementia** class
+- 2 subjects for the **Moderate Dementia** class
+- 100 subjects for the **Non Dementia** class
+- 70 subjects for the **Very Mild Dementia** class
 
 Due to this, we used the Stratified K-Fold technique plus a weighted data loader to try to make the most of the data available to us.
