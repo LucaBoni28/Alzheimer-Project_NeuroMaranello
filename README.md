@@ -32,7 +32,7 @@ The code has been developing to be run directly from Google Colaboratory, thus i
 The project's current version contains the Project Milestone 1: Data acquisition and preparation. 
 
 ## Milestone 1: Data acquisition and preparation
-In this phase of the project, we downloaded the dataset and prepare the data for training using strategies to increase the effectiveness of the training. Our data set has is very unbalanced, with the Mild Demented class having a significantly smaller amount of data, as can be seen in the class distribution below:
+In this phase of the project, we downloaded the dataset and prepared the data for training using strategies to increase the effectiveness of the training. Our data set is very unbalanced, with the Moderate Dementia Class having a significantly smaller amount of data, as can be seen in the class distribution below:
 
 28 subjects for the Mild Dementia Class
 2 subjects for the Moderate Dementia Class
