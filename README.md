@@ -40,3 +40,6 @@ In this phase of the project, we downloaded the dataset and prepared the data fo
 - 70 subjects for the **Very Mild Dementia** class
 
 Due to this, we used the Stratified K-Fold technique plus a weighted sampler for the data loader to try to make the most of the data available to us.
+
+## Milestone 2: Baseline evaluation, baseline model
+Based on our previously obtained dataset, we defined a Python Lightning Module together with a Dataloader, for efficient data loading.
