@@ -29,10 +29,10 @@ The code has been developing to be run directly from Google Colaboratory, thus i
 The needed packages will be installed in the Colab environment with the first command (cell).
 
 ##
-### Project Milestones
+## Project Milestones
 The project's current version contains:  
 
-* ## Milestone 1: Data acquisition and preparation
+* ### Milestone 1: Data acquisition and preparation
 In this phase of the project, we downloaded the dataset and prepared the data for training using strategies to increase the effectiveness of the training. Our data set is very unbalanced, with the Moderate Dementia Class having a significantly smaller amount of data, as can be seen in the class distribution below:
 
 - 28 subjects for the **Mild Dementia** class
@@ -42,7 +42,7 @@ In this phase of the project, we downloaded the dataset and prepared the data fo
 
 Due to this unequal distribution, we used three different techniques to mitigate the negative effects on the training: the Stratified K-Fold, weighted classes and a weighted sampler for the dataloader.
 
-* ## Milestone 2: Baseline evaluation, baseline model
+* ### Milestone 2: Baseline evaluation, baseline model
 For an efficient data loading we defined the class AlzheimerDataModule using the Lightning Data Module. We inserted the train_dataloader and val_dataloader methods and we implemented into the setup method the three strategies mentioned earlier. In this way by calling the class AlzheimerDataModule, the original dataset is splitted in training and validation sets applying the Stratified K-Fold, the weighted class and weighted sampler.
 
 For the model architecture definition we declared a class using the Lightning Module, which allows to describe through predefined methods the model's architecture, the training_step, the validation_step and the performance metrics. We chose a simple Convolutioanl Neural Network(CNN) with a Fully Connected(FC) Classifier to predict the class confidence values.
