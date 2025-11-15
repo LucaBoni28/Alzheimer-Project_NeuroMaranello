@@ -26,12 +26,13 @@ https://www.kaggle.com/datasets/preetpalsingh25/alzheimers-dataset-4-class-of-im
 
 ### Get started
 The code has been developing to be run directly from Google Colaboratory, thus it's sufficient to open the file in Colab and run the single cells either one by one or all in one.
+The needed packages will be installed in the Colab environment with the first command (cell).
 
 ##
 ### Project Milestones
-The project's current version contains the Project Milestone 1: Data acquisition and preparation. 
+The project's current version contains:  
 
-## Milestone 1: Data acquisition and preparation
+* ## Milestone 1: Data acquisition and preparation
 In this phase of the project, we downloaded the dataset and prepared the data for training using strategies to increase the effectiveness of the training. Our data set is very unbalanced, with the Moderate Dementia Class having a significantly smaller amount of data, as can be seen in the class distribution below:
 
 - 28 subjects for the **Mild Dementia** class
@@ -39,7 +40,14 @@ In this phase of the project, we downloaded the dataset and prepared the data fo
 - 100 subjects for the **Non Dementia** class
 - 70 subjects for the **Very Mild Dementia** class
 
-Due to this, we used the Stratified K-Fold technique plus a weighted sampler for the data loader to try to make the most of the data available to us.
+Due to this unequal distribution, we used three different techniques to mitigate the negative effects on the training: the Stratified K-Fold, weighted classes and a weighted sampler for the dataloader.
 
-## Milestone 2: Baseline evaluation, baseline model
-Based on our previously obtained dataset, we defined a Python Lightning Module together with a Dataloader, for efficient data loading.
+* ## Milestone 2: Baseline evaluation, baseline model
+For an efficient data loading we defined the class AlzheimerDataModule using the Lightning Data Module. We inserted the train_dataloader and val_dataloader methods and we implemented into the setup method the three strategies mentioned earlier. In this way by calling the class AlzheimerDataModule, the original dataset is splitted in training and validation sets applying the Stratified K-Fold, the weighted class and weighted sampler.
+
+For the model architecture definition we declared a class using the Lightning Module, which allows to describe through predefined methods the model's architecture, the training_step, the validation_step and the performance metrics. We chose a simple Convolutioanl Neural Network(CNN) with a Fully Connected(FC) Classifier to predict the class confidence values.
+
+Finally, the last implementation is related to the training phase and the last evaluation of the best model. Thanks to the package Lightning Module, the requested code is very clean, because it's sufficient to define the setup of the training by using the trainer method and then start the run calling the mode "fit". 
+Since we decided to use the K-Folds technique we put all the setup and training code in a for loop to repeat the training for each fold and also at each iteration the model with the best validation accuracy is saved as the absolute best model for the final evaluation.
+
+The final evaluation is performed by loading the best model previously saved and then call the trainer in "validate" mode.
