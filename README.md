@@ -43,7 +43,9 @@ In this phase of the project, we downloaded the dataset and prepared the data fo
 Due to this unequal distribution, we used three different techniques to mitigate the negative effects on the training: the Stratified K-Fold, weighted classes and a weighted sampler for the dataloader.
 
 * ### Milestone 2: Baseline evaluation, baseline model
-For an efficient data loading we defined the class AlzheimerDataModule using the Lightning Data Module. We inserted the train_dataloader and val_dataloader methods and we implemented into the setup method the three strategies mentioned earlier. In this way by calling the class AlzheimerDataModule, the original dataset is splitted in training and validation sets applying the Stratified K-Fold, the weighted class and weighted sampler.
+For an efficient data loading we defined the class AlzheimerDataModule using the Lightning Data Module. We inserted the train_dataloader and val_dataloader methods and we implemented into the setup method the three strategies mentioned earlier. In this way by calling the class AlzheimerDataModule, the original dataset is split in training and validation sets applying the Stratified K-Fold, where K equals 3 for our model.
+
+Due to the extremely unbalanced dataset, we selected 2 different approaches to tackle the problem and make the most out of our data: the weighted class and weighted sampler. For this version, we selected the weighted class method by setting the weighted sampler flag inside the code to False.
 
 For the model architecture definition we declared a class using the Lightning Module, which allows to describe through predefined methods the model's architecture, the training_step, the validation_step and the performance metrics. We chose a simple Convolutioanl Neural Network(CNN) with a Fully Connected(FC) Classifier to predict the class confidence values.
 
