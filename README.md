@@ -60,5 +60,19 @@ Since we decided to use the K-Folds technique we put all the setup and training 
 
 The final evaluation is performed by loading the best model previously saved and then call the trainer in "validate" mode.
 
-* ### Milestone 3: Final Project
-* 
+### Milestone 3: Final Project
+For the final CNN, several configurations were tried and obtained after combining different network improvement strategies:
+In order to improve the baseline model, several modifications were made, the added strategies
+are described below:
+• Changing the number of feature map channels in each convolutional layer;
+• Fine tuning the hyperparamenters using WandB (Weights and Biases) sweeps;
+• Running Grad-CAM to see if the model was really learning the important Alzheimer
+features or just memorizing data (Advanced task);
+• Using a second augmented Alzheimer dataset and adding salt and pepper noise on it to
+increase data variability (Advanced task);
+
+To experiment and see if there would be any improvement in results, the final model's convolutional layer was replaced through Transfer Learning using the ResNet18 model, however the Transfer learning approach resulted in a worse heatmap.
+
+It is important to remember that for running the whole code, a WandB API Key is neeeded, there is a hardcoded key in the code, however if someone wants to visualize the results in their own WandB, they need to provide their specific API Key
+
+For more information about the project, please access the pdf Report_NeuroMaranello
