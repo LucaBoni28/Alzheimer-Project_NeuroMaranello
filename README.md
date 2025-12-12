@@ -73,6 +73,8 @@ increase data variability (Advanced task);
 
 To experiment and see if there would be any improvement in results, the final model's convolutional layer was replaced through Transfer Learning using the ResNet18 model, however the Transfer learning approach resulted in a worse heatmap.
 
-It is important to remember that for running the whole code, a WandB API Key is neeeded, there is a hardcoded key in the code, however if someone wants to visualize the results in their own WandB, they need to provide their specific API Key
+It is important to remember that for running the whole code, a WandB API Key is neeeded, there is a hardcoded key in the code, however if someone wants to visualize the results in their own WandB, they need to provide their specific API Key. 
+
+ATTENTION: For some reason, it was not possible to obtain the best sweep ID when running the improved network last time, however the hyperparameters obtained in the sweep can be seen inside the report.
 
 For more information about the project, please access the pdf Report_NeuroMaranello
