@@ -11,6 +11,9 @@ Alzheimer’s disease (AD) is a progressive neurodegenerative disorder that impa
 
 The provided GitHub repository (see below) offers a simplified framework for building and training deep learning models to detect Alzheimer’s, including data preprocessing, CNN-based model design, and performance evaluation. Students will work on extending, experimenting with, and improving this baseline.
 
+### Files in repository
+This repository contains the final project's file named 'NeuroMaranelloNN', a pdf with the project report and this README with an overview and explanations of the project tasks.
+
 ### Tasks
 Students will study Alzheimer’s detection using deep learning and implement a CNN-based classifier using the provided dataset and code framework. The focus will be on training the model to distinguish between different stages of Alzheimer’s (e.g., Mild Demented, Moderate Demented, Severe Demented, and Non-Demented). Students should also evaluate model performance using accuracy, precision, recall, F1-score, and confusion matrix.
 
@@ -23,6 +26,9 @@ Experiment with improvements such as transfer learning (e.g., VGG16, ResNet, Eff
 #### Dataset:
 https://www.kaggle.com/datasets/marcopinamonti/alzheimer-mri-4-classes-dataset
 https://www.kaggle.com/datasets/preetpalsingh25/alzheimers-dataset-4-class-of-images
+
+Advanced Dataset:
+https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset
 
 ### Get started
 The code has been developing to be run directly from Google Colaboratory, thus it's sufficient to open the file in Colab and run the single cells either one by one or all in one.
@@ -53,3 +59,6 @@ Finally, the last implementation is related to the training phase and the last e
 Since we decided to use the K-Folds technique we put all the setup and training code in a for loop to repeat the training for each fold and also at each iteration the model with the best validation accuracy is saved as the absolute best model for the final evaluation.
 
 The final evaluation is performed by loading the best model previously saved and then call the trainer in "validate" mode.
+
+* ### Milestone 3: Final Project
+* 
